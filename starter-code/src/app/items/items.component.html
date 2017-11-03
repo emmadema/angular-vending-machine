@@ -1,0 +1,12 @@
+<input [(ngModel)]="keycode" type="text" placeholder="Enter the item code">
+<input type="submit" name="Dispense" (click)='getSelectedItem(keycode)'>
+<section >
+	<ul class="item-list" *ngIf="keycode">
+		<li class="item" *ngFor="let item of items">
+			<p>{{item.name}}</p>
+			<p>{{item.cost}}</p>
+			<p>{{item.remaining}}</p>
+			<p>{{item.code}}</p>
+		</li>
+	</ul>
+</section>

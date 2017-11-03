@@ -15,6 +15,7 @@ export class ItemService {
   }
 
   onItemsRetrieved(callback: any): void {
+    //method for gettin ght elist of items
     this.get().subscribe(callback);
   }
 
